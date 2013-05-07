@@ -1,0 +1,93 @@
+/*
+* Evansville Pediatric Dentristry
+* Copyright 2013, Evansville Pediatric Dentistry
+* Website created by Andrew
+*/
+
+/* Table of Content
+==================================================
+#Import Section
+#Typography
+#Header/Navigation
+#Site Styles
+#Top Section
+#About Section
+#Timeline Section
+#Mobile Section
+#Support Section
+#Footer Section
+#Media Queries
+*/
+	
+/* ======================================================= */
+/* #IMPORT SECTION */
+/* ======================================================= */
+
+
+@import url("bootstrap.css");
+@import url("bootstrap-responsive.css");
+
+
+/* ======================================================= */
+/* Typography
+/* ======================================================= */
+
+
+ @font-face {
+ 	font-family : 'FuturaStd';
+	src : url("fonts/FuturaStd-Medium.otf") format("opentype");
+}
+
+@font-face{
+	font-family : 'FuturaStd';
+	src : url("fonts/FuturaStd-Bold.otf") format("opentype");
+	font-weight : bold;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'FuturaStd', Helvetica, Arial, sans-serif;
+	font-weight: bold;
+	/*text-transform: capitalize;*/
+	margin: 0;
+	padding: 0;
+	color: #3c3c3c;
+}
+
+
+
+/* ======================================================= */
+/* Header / Navigation
+/* ======================================================= */
+
+header {
+	background-color: #fff;
+}
+
+.rightHeader { 
+	font-size: 11px; 
+}
+.headerInfo {
+	margin-right: 5px;
+}
+
+/* ======================================================= */
+/* Site Styles
+/* ======================================================= */
+
+body { color: #2d4f56; }
+
+
+
+/* ======================================================= */
+/* Footer
+/* ======================================================= */
+
+
+
+
+/* ======================================================= */
+/* @Media Queries
+/* ======================================================= */
+
+
+  
