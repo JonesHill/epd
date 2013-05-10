@@ -64,9 +64,6 @@ body {
 /* Header / Navigation
 /* ======================================================= */
 
-header {
-	background-color: #fff;
-}
 
 .logo {
 	margin-bottom: 30px;
@@ -144,7 +141,7 @@ ul.nav li.dropdown:hover > ul.dropdown-menu{
 
     /* Carousel base class */
     .carousel {
-      margin-bottom: 60px;
+      margin-bottom: 0px;
     }
 
     .carousel .container {
@@ -163,7 +160,7 @@ ul.nav li.dropdown:hover > ul.dropdown-menu{
     }
 
     .carousel .item {
-      height: 500px;
+      height: 480px;
     }
     .carousel img {
       position: absolute;
@@ -206,10 +203,21 @@ ul.nav li.dropdown:hover > ul.dropdown-menu{
  		position: absolute;
  		height: 460px;
  		left: 600px;
- 		bottom: -117px;
+ 		bottom: -126px;
     }
 
-
+    .btnSchAppNav {
+      height: 34px; 
+      width: 182px;
+      background-image: url(../img/btn-nav-schedule-appointment.png);
+      background-repeat: no-repeat;
+      display: block;
+      margin-top: 8px;
+      margin-right: 10px;
+    }
+    .btnSchAppNav:hover {
+      background-position: 0 -34px;
+    }
 
 
 
@@ -239,7 +247,14 @@ ul.nav li.dropdown:hover > ul.dropdown-menu{
   -webkit-font-smoothing: antialiased;
 }
 
+.pattern {
+    background-image: url(../img/bg.jpg);
+    background-repeat: repeat;
+}
 
+.white {
+  background-color: #fff;
+}
 /* ======================================================= */
 /* Footer
 /* ======================================================= */
