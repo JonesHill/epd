@@ -22,25 +22,72 @@ $(function() {
 		form.trigger('reset');
 	});
 
-	
+	$(".help-inline").each(function(){
+		$(this).css({display:"none"})
+	})
+
+	// Phone number formatting. 
+	$("input[type=tel]").on("keyup", function ( e ) {
+	    var $input = $(this), 
+	         value = $input.val(),
+	         deleting = false;
+
+	    if(e.keyCode == 8 || e.keyCode == 46) {
+	      deleting = true;
+	    }
+
+	    if(!deleting) {
+	      if(value.length == 3) {
+	        $input.val("(" + value + ") ");
+	      }
+	      else if(value.length == 9) {
+	        $input.val(value + "-");
+	      }
+	    }
+	})
+
+	$('input').each(function(){$(this).attr("required", false)})
 
 	form.validate({
-		//onfocusout: true,
-		submitHandler: submitAppointmentForm,
+		submitHandler: function(form) {
+			console.log('submitting')
+			$("#error-message").text("");
+
+			// set spinner
+			// send via ajax...
+
+			// change spinner to message sent or something...	
+			return false;
+		},
 
 		errorPlacement: function( error, element ){
-			element.next('.help-inline').append(error);
+			element.siblings('.help-inline').append(error);
+
 			element.parents('.control-group')
 				   .addClass("error");
+
 		},
 
 		success: function( element ){
-			console.log(element)
-			console.log(this)
 			element.parents('.control-group')
-			       .removeClass("error")
-				   .addClass("success");
+				   .removeClass("error");
 		},
+
+		showErrors: function( errorMap, errorList ) {
+			$.map(errorMap, function( val, element ){
+				var $element = $("#" + element);
+
+				$element.parents(".control-group")
+						        .addClass("error");
+
+				if(val == "Please enter a valid email address.") {
+					$element.siblings('.help-inline').css("display", "inline-block")
+				}
+				$("#error-message").text("Please fill in the required fields.");
+			})
+			
+			this.defaultShowErrors();
+		}, 
 
 		rules: {
 			first_name: "required",
@@ -49,18 +96,7 @@ $(function() {
 			city: "required",
 			state: "required",
 			zip: "required",
-			area_code: {
-				required: true,
-				minLength: 3
-			},
-			phone_1: {
-				required: true,
-				minLength: 3
-			},
-			phone_2: {
-				required: true,
-				minLength: 3
-			},
+			phone: "required",
 			email: {
 				required: true,
 				email: true
@@ -73,8 +109,7 @@ $(function() {
 		}
 	});
 
-	function submitAppointmentForm() {
-		console.log("submit...")
-	}
+	
+	
 
 });
