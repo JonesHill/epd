@@ -1,4 +1,4 @@
-$(function() {
+(function() {
 	var states = [ "Alabama","Alaska","Arizona","Arkansas","California",
 		"Colorado","Connecticut","Delaware","Florida","Georgia","Hawaii",
 		"Idaho","Illinois","Indiana","Iowa","Kansas","Kentucky","Louisiana",
@@ -50,11 +50,23 @@ $(function() {
 
 	form.validate({
 		submitHandler: function(form) {
-			console.log('submitting')
+console.log('submitting')
 			$("#error-message").text("");
 
 			// set spinner
 			// send via ajax...
+			$.ajax({
+				url: form.attr("action") + "?ajax=true",
+				type: form.attr("method"),
+				data: form.serialize(),
+				success: function ( data ) {
+
+				},
+
+				error: function () {
+
+				}
+			});
 
 			// change spinner to message sent or something...	
 			return false;
@@ -112,4 +124,4 @@ $(function() {
 	
 	
 
-});
+})();
