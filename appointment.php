@@ -8,12 +8,13 @@
 
 ?>
 <head>
-<link href="css/styles.css" rel="stylesheet" media="screen">
-<link href="css/bootstrap.css" rel="stylesheet" media="screen">
-<link href="css/bootstrap-responsive.css" rel="stylesheet" media="screen">
+<link href="./css/styles.css" type="text/css" rel="stylesheet" media="screen">
+<link href="./css/bootstrap.css" type="text/css" rel="stylesheet" media="screen">
+<link href="./css/bootstrap-responsive.css" type="text/css" rel="stylesheet" media="screen">
 </head>
 
 <?php
+
     $name = isset($_GET['name']) ? $_GET['name'] : "";
     $street = isset($_GET['street_address']) ? $_GET['street_address'] : "";
     $city = isset($_GET['city']) ? $_GET['city'] : "";
@@ -38,12 +39,12 @@
         } 
     ?>
 </div>
-<form class="form-horizontal" id="appointment-form" method="post" action="lib/process_form.php">
+<form class="form-horizontal" id="appointment-form" method="post" action="./lib/process_form.php">
     <input type="hidden" name="form_type" value="appointment" />
   	<div class="control-group">
     	<label class="control-label" for="first_name">Name:</label>
     	<div class="controls">
-    		<input class="span5" type="text" id="name" name="name" placeholder="First" value="<?php echo $name; ?>" />
+    		<input class="span5" type="text" id="name" name="name" placeholder="First" value="<?php echo $name; ?>" required />
     		<!-- <input class="span3" type="text" id="last_name" name="last_name" placeholder="Last" required  /> -->
     		<span class="help-inline"></span>
     	</div>
@@ -106,6 +107,6 @@
 </form>
 
 <script src="http://code.jquery.com/jquery.js"></script>
-<script src="js/vendor/jquery.validate.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/appointment.js"></script>
+<script src="./js/vendor/jquery.validate.js"></script>
+<script src="./js/bootstrap.min.js"></script>
+<script src="./js/appointment.js"></script>

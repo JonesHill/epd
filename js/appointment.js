@@ -15,11 +15,11 @@
 	});
 
 	// Setup our validation. 
-	var form = $("#appointment-form");
+	var $form = $("#appointment-form");
 
 	// Bind Events
 	$("#reset-button").on("click", function(){
-		form.trigger('reset');
+		$form.trigger('reset');
 	});
 
 	$(".help-inline").each(function(){
@@ -48,19 +48,21 @@
 
 	$('input').each(function(){$(this).attr("required", false)})
 
-	form.validate({
-		submitHandler: function(form) {
-console.log('submitting')
-			$("#error-message").text("");
+	$form.validate({
+		submitHandler: function( form ) {
+			$("#error-message").text(""); //
 
 			// set spinner
+
 			// send via ajax...
 			$.ajax({
-				url: form.attr("action") + "?ajax=true",
-				type: form.attr("method"),
-				data: form.serialize(),
+				url: $form.attr('action') + "?ajax=true",
+				type: $form.attr("method"),
+				data: $form.serialize(),
 				success: function ( data ) {
-
+			console.log("success");
+			console.log(data);		
+					// change spinner to message sent or something...
 				},
 
 				error: function () {
@@ -68,7 +70,7 @@ console.log('submitting')
 				}
 			});
 
-			// change spinner to message sent or something...	
+				
 			return false;
 		},
 
@@ -104,6 +106,7 @@ console.log('submitting')
 		rules: {
 			first_name: "required",
 			last_name: "required",
+			name: "required",
 			street_address: "required",
 			city: "required",
 			state: "required",

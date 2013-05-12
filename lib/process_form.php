@@ -46,6 +46,8 @@ $error = false;
 $success = false;
 $invalid_email = false;
 
+
+////NEED TO PROTECT THIS SOME HOW< MAKE SUREO SOMEONE SUBMITTED A FORM...
 // Make sure the required fields have been submitted. 
 foreach($required_fields as $value) {
 	if(empty( $_POST[ $value ] )) {
