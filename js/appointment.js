@@ -50,27 +50,35 @@
 
 	$form.validate({
 		submitHandler: function( form ) {
-			$("#error-message").text(""); //
+			var loader = $("<img>"),
+				$submit = $('#submit-button');
 
-			// set spinner
-
+			loader.attr('src', './img/loader.gif');
+			$('#sent-message').html( loader );
+			$("#error-message").html("&nbsp;");
+			
 			// send via ajax...
 			$.ajax({
 				url: $form.attr('action') + "?ajax=true",
 				type: $form.attr("method"),
 				data: $form.serialize(),
 				success: function ( data ) {
-			console.log("success");
-			console.log(data);		
 					// change spinner to message sent or something...
+					if(typeof data == "string" && data == "success") {
+						$('#sent-message').html("Thanks for your message! We'll get back to you soon.");
+						$submit.attr('disabled', '');	
+						$('#reset-button').attr('disabled', '');
+					}
+					else {
+						$('#sent-message').html("There was a problem sending your message. Please try again.");
+					}
 				},
 
 				error: function () {
-
+					$('#sent-message').html("There was a problem sending your message. Please try again.");
 				}
 			});
-
-				
+		
 			return false;
 		},
 
@@ -106,7 +114,6 @@
 		rules: {
 			first_name: "required",
 			last_name: "required",
-			name: "required",
 			street_address: "required",
 			city: "required",
 			state: "required",
@@ -116,15 +123,7 @@
 				required: true,
 				email: true
 			}
-
 		},
-
-		messages: {
-
-		}
 	});
-
-	
-	
 
 })();
