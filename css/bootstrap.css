@@ -896,8 +896,8 @@ dd {
 hr {
   margin: 20px 0;
   border: 0;
-  border-top: 1px solid #eeeeee;
-  border-bottom: 1px solid #ffffff;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #eee;
 }
 
 abbr[title],
@@ -3353,6 +3353,7 @@ input[type="button"].btn-block {
 .btn-primary {
   color: #ffffff;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  font-weight: bold;
   background-color: #006dcc;
   *background-color: #0044cc;
   background-image: -moz-linear-gradient(top, #0088cc, #0044cc);
@@ -4116,6 +4117,7 @@ input[type="submit"].btn.btn-mini {
   -webkit-border-radius: 0;
      -moz-border-radius: 0;
           border-radius: 0;
+  background-color: #fff;
 }
 
 .nav-tabs.nav-stacked > li:first-child > a {
