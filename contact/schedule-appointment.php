@@ -114,7 +114,7 @@
                 <li><a href="../contact/index.html">Contact Us</a></li>
                 <li><a href="../contact/emergencies.html">Emergencies</a></li>
                 <li><a href="../contact/feedback.html">Feedback</a></li>
-                <li><a href="../contact/schedule-appointment.html">Schedule Appointment</a></li>
+                <li><a href="../contact/schedule-appointment.php">Schedule Appointment</a></li>
               </ul>
             </li>
           </ul>
@@ -138,7 +138,7 @@
             <li><a href="index.html">Contact Us</a></li>
             <li><a href="emergencies.html">Emergencies</a></li>
             <li><a href="feedback.html">Feedback</a></li>
-            <li><a href="schedule-appointment.html">Schedule Appointment</a></li>
+            <li><a href="schedule-appointment.php">Schedule Appointment</a></li>
 
           </ul>
         </div>
@@ -252,7 +252,7 @@
             <li><a href="../contact/index.html">Contact Us</a></li>
             <li><a href="../contact/emergencies.html">Emergencies</a></li>
             <li><a href="../contact/feedback.html">Feedback</a></li>
-            <li><a href="../contact/schedule-appointment.html">Schedule Appointment</a></li>
+            <li><a href="../contact/schedule-appointment.php">Schedule Appointment</a></li>
           </ul>
         <h6>Our Team</h6>
           <ul>

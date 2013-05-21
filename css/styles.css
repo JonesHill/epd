@@ -191,7 +191,17 @@ ul.nav li.dropdown:hover > ul.dropdown-menu{
 
 
 
+/* ======================================================= */
+/* Form Styles
+/* ======================================================= */
 
+.sent-message {
+  display: inline-block;
+  font-size: 18px;
+  position: relative;
+  top: 2px;
+  left: 5px;
+}
 
 
 
