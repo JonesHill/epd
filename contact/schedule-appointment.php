@@ -157,18 +157,18 @@
         <p><strong>NOTE:</strong> All fields disignated with * are required in order to process your information</p>
 
         
-            <?php if(isset($_GET["err"]) && $_GET["err"] == true) { ?>
-              <div class=" control-group error-message text-error" id="error-message">
-                <?php
-                    if($_GET['inv'] == 1) {
-                        echo "Please provide a valid email address.";
-                    }
-                    else {
-                        echo "Please fill in the required fields.";
-                    }
-                ?>
-              </div>
-            <?php } ?>
+        <?php if(isset($_GET["err"]) && $_GET["err"] == true) { ?>
+          <div class=" control-group error-message text-error" id="error-message">
+            <?php
+                if($_GET['inv'] == 1) {
+                    echo "Please provide a valid email address.";
+                }
+                else {
+                    echo "Please fill in the required fields.";
+                }
+            ?>
+          </div>
+        <?php } ?>
         
         <form class="" id="appointment-form" method="post" action="../../lib/process_form.php">
           <input type="hidden" name="form_type" value="appointment" />

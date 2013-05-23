@@ -203,6 +203,12 @@ ul.nav li.dropdown:hover > ul.dropdown-menu{
   left: 5px;
 }
 
+.sent-message.contact-form {
+  width: 450px;
+  left: 0px;
+  top: 20px;
+}
+
 
 
 

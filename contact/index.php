@@ -7,7 +7,7 @@
 <meta name="keywords" content="Evansville Pediatric Dentistry, doctor jeff hiester, dr jeff, evansville indiana, evansville in, dentist, pediatric, pediatrician, dental, care, child, children, infant, adolescents, teen, teenage, clinic, teeth, surgery, office">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="../css/styles.css" rel="stylesheet" media="screen">
-<script type="text/javascript" src="js/modernizer.js"></script>
+<!-- <script type="text/javascript" src="js/modernizer.js"></script> -->
 <script src="http://maps.google.com/maps/api/js?sensor=false" type="text/javascript"></script>
 </head>
 <body>
@@ -161,31 +161,84 @@
               </div>
             </div>
           </div>
+
+          <?php
+            // This is only really used if there is no JS enabled. 
+            $name = isset($_GET['name']) ? $_GET['name'] : "";
+            $phone = isset($_GET['phone']) ? $_GET['phone'] : "";
+            $email = isset($_GET['email']) ? $_GET['email'] : "";
+            $message = isset($_GET['message']) ? $_GET['message'] : "";
+          ?>
+
           <div class="well">
             <div class="row-fluid">
               <div class="span5">
-                <form>
-                  Name:<br>
-                  <input type="text" placeholder="First and Last">
-                  <br>
-                  Phone:<br>
-                  <input type="text" placeholder="xxx-xxx-xxxx">
-                  <br>
-                  E-mail:<br>
-                  <input type="text" placeholder="john@example.com">
-                  <br>
-                  Select a location:<br>
-                  <select>
-                      <option>--Select--</option>
-                      <option>East Office</option>
-                      <option>West Office</option>
-                  </select>
-                  <br>
-                  Message:<br>
-                  <textarea rows="3"></textarea><br>
-                  <input type="submit" value="Submit">
+
+                <?php 
+                  if(isset($_GET['mail_sent']) && $_GET['mail_sent'] == true) {
+                    echo "<p>Thanks for your message! We'll get back to you soon.</p>";
+                  }
+                  else {
+                    if(isset($_GET["err"]) && $_GET["err"] == true) { ?>
+                      <div class=" control-group error-message text-error" id="error-message">
+                        <?php
+                            if($_GET['inv'] == 1) {
+                                echo "Please provide a valid email address.";
+                            }
+                            else {
+                                echo "Please fill in the required fields.";
+                            }
+                        ?>
+                      </div>
+                  <?php } ?>
+
+                <form class="" id="appointment-form" method="post" action="../../lib/process_form.php">
+                  <input type="hidden" name="form_type" value="contact" />
+                  <div class="control-group">
+                    <label class="control-label" for="name">Name<span class="required">*</span></label>
+                    <input class="" type="text" id="name" name="name" placeholder="First and Last" value="<?php echo $name; ?>"  />
+                    <span class="help-inline"></span>
+                  </div>
+
+                  <div class="control-group">
+                    <label class="control-label" for="phone">Phone<span class="required">*</span></label>
+                    <input class="" type="tel" id="phone" name="phone" placeholder="(555) 555-5555" value="<?php echo $phone; ?>" required />
+                    <span class="help-inline"></span>
+                  </div>
+
+                  <div class="control-group">
+                    <label class="control-label" for="email">Email<span class="required">*</span></label>
+                    <input class="" type="email" id="email" name="email" placeholder="john@example.com" value="<?php echo $email; ?>" required />
+                    <span class="help-inline"></span>
+                  </div>
+                  
+                  <div class="control-group">
+                    <label class="control-label" for="location">Select a location<span class="required">*</span></label>
+                    <select name="location" id="location">
+                      <option value="">--Select--</option>
+                      <option value="east" name="east" required>East Office</option>
+                      <option value="west" name="west" required>West Office</option>
+                    </select>
+                    <span class="help-inline"></span>
+                  </div>
+                  
+                  
+                  <div class="control-group">
+                    <label class="control-label" for="message">Message:</label>
+                    <textarea class="" rows="3" id="message" name="message"><?php echo $message; ?></textarea>
+                  </div>
+
+                  <div class="controls">
+                    <button type="submit" id="submit-button" class="btn btn-primary" data-loading-text="Sending..." data-complete-text=" Sent! ">
+                          Submit
+                      </button>
+                    <button type="button" id="reset-button" class="btn">Reset</button>
+                      <div id="sent-message" class="sent-message contact-form">&nbsp;</div>
+                  </div>
                 </form>
+                <?php } ?>
               </div>
+
               <div class="span7">
                 <div id="map_all" class="box-shadow"></div>
                 <script type="text/javascript">
@@ -228,27 +281,6 @@
               </div>
             </div>
           </div><!-- end well -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         </div>
       </div>
   </div><!-- End container -->
@@ -325,8 +357,10 @@
   </div>
 </footer>
 
-    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="../js/vendor/jquery-1.9.1.min.js"></script>
+    <script src="../js/vendor/jquery.validate.js"></script>
     <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/contact.js"></script>
   </div>
   </body>
 </html>
