@@ -54,11 +54,8 @@
 
 	$form.validate({
 		submitHandler: function( form ) {
-			var loader = $("<img>"),
-				$submit = $('#submit-button');
+			var $submit = $('#submit-button');
 
-			loader.attr('src', './img/loader.gif');
-			$('#sent-message').html( loader );
 			$("#error-message").html("&nbsp;");
 			$submit.button('loading');
 			// send via ajax...
