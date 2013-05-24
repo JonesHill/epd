@@ -48,10 +48,6 @@
 	    }
 	});
 
-	$('input').each(function() {
-		$(this).attr("required", false);
-	});
-
 	$form.validate({
 		submitHandler: function( form ) {
 			var $submit = $('#submit-button');

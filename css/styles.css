@@ -209,7 +209,13 @@ ul.nav li.dropdown:hover > ul.dropdown-menu{
   top: 20px;
 }
 
+.feedback-answers {
+  margin: 10px 0 30px 5px;
+}
 
+.feedback-text {
+  margin: 5px 0 25px
+}
 
 
 
