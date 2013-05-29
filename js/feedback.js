@@ -28,7 +28,7 @@
                     // change spinner to message sent or something...
                     if(typeof data == "string" && data == "success") {
                         $submit.button('complete');
-                        $('#sent-message').html("Thanks for your message! We'll get back to you soon.");
+                        $('#sent-message').html("Thanks for your feedback!");
                         $submit.attr('disabled', '');
                     }
                     else {
@@ -75,14 +75,8 @@
         },
 
         rules: {
-            name: "required",
-            phone: "required",
-            location: "required",
-            email: {
-                required: true,
-                email: true
-            }
-        },
+            name: "required"
+        }
     });
 
 })();
