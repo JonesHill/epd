@@ -1,17 +1,10 @@
 (function() {
-    
     // Setup our validation. 
     var $form = $("#feedback-form");
 
     // Bind Events
     $("#reset-button").on("click", function(){
         $form.trigger('reset');
-    });
-
-    $(".help-inline").each(function(){
-        $(this).css({
-            display:"none"
-        });
     });
 
     $form.validate({
@@ -56,22 +49,6 @@
         success: function( element ){
             element.parents('.control-group')
                    .removeClass("error");
-        },
-
-        showErrors: function( errorMap, errorList ) {
-            $.map(errorMap, function( val, element ){
-                var $element = $("#" + element);
-
-                $element.parents(".control-group")
-                        .addClass("error");
-
-                if(val == "Please enter a valid email address.") {
-                    $element.siblings('.help-inline').css("display", "inline-block");
-                }
-                $("#error-message").text("Please fill in the required fields.");
-            });
-
-            this.defaultShowErrors();
         },
 
         rules: {
