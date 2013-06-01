@@ -156,6 +156,7 @@
             <div class="control-group">
               <label class="control-label" for="name">Patient Name<span class="required">*</span></label>
               <input class="" type="text" id="name" name="name" placeholder="First & Last" value="<?php echo $name; ?>" required/>
+              <span class="help-inline"></span>
             </div>
 
             <div class="control-group">
