@@ -103,7 +103,7 @@
               </ul>
             </li>
           </ul>
-          <a href="../#" class="btnSchAppNav pull-right"></a>
+          <a href="../contact/schedule-appointment.php" class="btnSchAppNav pull-right"></a>
         </div><!--/.nav-collapse -->
       </div><!-- /.navbar-inner -->
     </div><!-- /.navbar -->
