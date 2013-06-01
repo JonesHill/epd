@@ -245,7 +245,8 @@ if($_SERVER['REQUEST_METHOD'] == "POST") {
 			$required_fields = array(
 				"name",
 				"phone",
-				"email"
+				"email",
+				"location"
 			);
 
 

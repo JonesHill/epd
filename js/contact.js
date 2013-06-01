@@ -1,7 +1,7 @@
 (function() {
     
     // Setup our validation. 
-    var $form = $("#appointment-form");
+    var $form = $("#contact-form");
 
     // Bind Events
     $("#reset-button").on("click", function(){
@@ -37,7 +37,7 @@
     $form.validate({
         submitHandler: function( form ) {
             var $submit = $('#submit-button');
-
+            
             $submit.button('loading');
             // send via ajax...
             $.ajax({

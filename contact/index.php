@@ -7,7 +7,6 @@
 <meta name="keywords" content="Evansville Pediatric Dentistry, doctor jeff hiester, dr jeff, evansville indiana, evansville in, dentist, pediatric, pediatrician, dental, care, child, children, infant, adolescents, teen, teenage, clinic, teeth, surgery, office">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="../css/styles.css" rel="stylesheet" media="screen">
-<!-- <script type="text/javascript" src="js/modernizer.js"></script> -->
 <script src="http://maps.google.com/maps/api/js?sensor=false" type="text/javascript"></script>
 </head>
 <body>
@@ -122,7 +121,7 @@
       <div class="row-fluid">
         <div class="span3">
           <ul class="nav nav-tabs nav-stacked">
-            <li><a href="index.html">Contact Us</a></li>
+            <li><a href="index.php">Contact Us</a></li>
             <li><a href="emergencies.html">Emergencies</a></li>
             <li><a href="feedback.php">Feedback</a></li>
             <li><a href="schedule-appointment.php">Schedule Appointment</a></li>
@@ -192,11 +191,11 @@
                       </div>
                   <?php } ?>
 
-                <form class="" id="appointment-form" method="post" action="../../lib/process_form.php">
+                <form class="" id="contact-form" method="post" action="../../lib/process_form.php">
                   <input type="hidden" name="form_type" value="contact" />
                   <div class="control-group">
                     <label class="control-label" for="name">Name<span class="required">*</span></label>
-                    <input class="" type="text" id="name" name="name" placeholder="First and Last" value="<?php echo $name; ?>"  />
+                    <input class="" type="text" id="name" name="name" placeholder="First and Last" value="<?php echo $name; ?>"  required />
                     <span class="help-inline"></span>
                   </div>
 
@@ -357,10 +356,7 @@
   </div>
 </footer>
 
-    <script src="../js/vendor/jquery-1.9.1.min.js"></script>
-    <script src="../js/vendor/jquery.validate.js"></script>
-    <script src="../js/bootstrap.min.js"></script>
-    <script src="../js/contact.js"></script>
+    <script src="../js/epd.min.js"></script>
   </div>
   </body>
 </html>

@@ -310,10 +310,7 @@
   </div>
 </footer>
 
-    <script src="../js/vendor/jquery-1.9.1.min.js"></script>
-    <script src="../js/vendor/jquery.validate.js"></script>
-    <script src="../js/bootstrap.min.js"></script>
-    <script src="../js/appt.js"></script>
+    <script src="../js/epd.min.js"></script>
   </div>
   </body>
 </html>
