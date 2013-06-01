@@ -7,7 +7,6 @@
 <meta name="keywords" content="Evansville Pediatric Dentistry, doctor jeff hiester, dr jeff, evansville indiana, evansville in, dentist, pediatric, pediatrician, dental, care, child, children, infant, adolescents, teen, teenage, clinic, teeth, surgery, office">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="../css/styles.css" rel="stylesheet" media="screen">
-<script type="text/javascript" src="js/modernizer.js"></script>
 </head>
 <body>
 <div class="container">
@@ -99,7 +98,7 @@
               <ul class="dropdown-menu">
                 <li><a href="../contact/index.php">Contact Us</a></li>
                 <li><a href="../contact/emergencies.html">Emergencies</a></li>
-                <li><a href="../contact/feedback.html">Feedback</a></li>
+                <li><a href="../contact/feedback.php">Feedback</a></li>
                 <li><a href="../contact/schedule-appointment.php">Schedule Appointment</a></li>
               </ul>
             </li>
@@ -123,7 +122,7 @@
           <ul class="nav nav-tabs nav-stacked">
             <li><a href="index.html">Contact Us</a></li>
             <li><a href="emergencies.html">Emergencies</a></li>
-            <li><a href="feedback.html">Feedback</a></li>
+            <li><a href="feedback.php">Feedback</a></li>
             <li><a href="schedule-appointment.php">Schedule Appointment</a></li>
 
           </ul>
@@ -156,7 +155,7 @@
             <input type="hidden" name="form_type" value="feedback" />
             <div class="control-group">
               <label class="control-label" for="name">Patient Name<span class="required">*</span></label>
-              <input class="" type="text" id="name" name="name" placeholder="First & Last" value="<?php echo $name; ?>" />
+              <input class="" type="text" id="name" name="name" placeholder="First & Last" value="<?php echo $name; ?>" required/>
             </div>
 
             <div class="control-group">
@@ -322,7 +321,7 @@
             <li><a href="../locations/west-office.html">West Office</a></li>
             <li><a href="../contact/index.php">Contact Us</a></li>
             <li><a href="../contact/emergencies.html">Emergencies</a></li>
-            <li><a href="../contact/feedback.html">Feedback</a></li>
+            <li><a href="../contact/feedback.php">Feedback</a></li>
             <li><a href="../contact/schedule-appointment.php">Schedule Appointment</a></li>
           </ul>
         <h6>Our Team</h6>

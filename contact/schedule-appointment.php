@@ -113,7 +113,7 @@
               <ul class="dropdown-menu">
                 <li><a href="../contact/index.php">Contact Us</a></li>
                 <li><a href="../contact/emergencies.html">Emergencies</a></li>
-                <li><a href="../contact/feedback.html">Feedback</a></li>
+                <li><a href="../contact/feedback.php">Feedback</a></li>
                 <li><a href="../contact/schedule-appointment.php">Schedule Appointment</a></li>
               </ul>
             </li>
@@ -137,7 +137,7 @@
           <ul class="nav nav-tabs nav-stacked">
             <li><a href="index.html">Contact Us</a></li>
             <li><a href="emergencies.html">Emergencies</a></li>
-            <li><a href="feedback.html">Feedback</a></li>
+            <li><a href="feedback.php">Feedback</a></li>
             <li><a href="schedule-appointment.php">Schedule Appointment</a></li>
 
           </ul>
@@ -251,7 +251,7 @@
             <li><a href="../locations/west-office.html">West Office</a></li>
             <li><a href="../contact/index.php">Contact Us</a></li>
             <li><a href="../contact/emergencies.html">Emergencies</a></li>
-            <li><a href="../contact/feedback.html">Feedback</a></li>
+            <li><a href="../contact/feedback.php">Feedback</a></li>
             <li><a href="../contact/schedule-appointment.php">Schedule Appointment</a></li>
           </ul>
         <h6>Our Team</h6>
