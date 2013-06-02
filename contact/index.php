@@ -191,7 +191,6 @@
                       </div>
                   <?php } ?>
 
-
                 <form class="" id="contact-form" method="post" action="../../lib/process_form.php">
                   <input type="hidden" name="form_type" value="contact" />
                   <div class="control-group">
