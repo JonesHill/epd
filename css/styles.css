@@ -588,7 +588,7 @@ footer p {
   .home-bubble { margin: 20px 0; }
   .container { padding: 0 20px; }
    .carousel-control { z-index: 9; }
-
+  .download { text-align: center; margin-bottom: 20px; }
      .navbar .btn-navbar {
     margin-top: 5px;
   } 
@@ -642,6 +642,7 @@ footer p {
   .home-bubble { margin: 20px 0; }
     .carousel-control { z-index: 9; }
     .border-right {border-right: none; border-bottom: solid 1px #d7d7d7; padding-bottom: 40px;}
+      .download { text-align: center; margin-bottom: 20px; }
 
       .navbar .btn-navbar {
     margin-top: 5px;
