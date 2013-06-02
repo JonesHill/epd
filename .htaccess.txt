@@ -28,3 +28,6 @@ Redirect permanent /index.php3?pageid=ToothfairyLetter.htm http://www.evansville
 Redirect permanent /index.php3?pageid=ContactUs.htm http://www.evansvillepediatricdentistry.com/contact/index.php
 Redirect permanent /index.php3?command=ap.html http://www.evansvillepediatricdentistry.com/contact/schedule-appointment.php
 Redirect permanent /index.php3?command=fb.html http://www.evansvillepediatricdentistry.com/contact/feedback.php
+
+#404 Redirect
+ErrorDocument 404 /notfound.html
