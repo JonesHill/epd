@@ -100,6 +100,10 @@ p {
   margin-top: 80px;
 }
 
+address {
+  margin: 0;
+  padding: 0;
+}
 
 /* ======================================================= */
 /* Header / Navigation
@@ -191,9 +195,31 @@ ul.nav li.dropdown:hover > ul.dropdown-menu{
 
 
 
+/* ======================================================= */
+/* Form Styles
+/* ======================================================= */
 
+.sent-message {
+  display: inline-block;
+  font-size: 18px;
+  position: relative;
+  top: 2px;
+  left: 5px;
+}
 
+.sent-message.contact-form {
+  width: 450px;
+  left: 0px;
+  top: 20px;
+}
 
+.feedback-answers {
+  margin: 10px 0 30px 5px;
+}
+
+.feedback-text {
+  margin: 5px 0 25px
+}
 
 
 
@@ -229,29 +255,39 @@ ul.nav li.dropdown:hover > ul.dropdown-menu{
       top: 0;
       left: 0;
       min-width: 100%;
-      height: 500px;
+      height: 480px;
     }
 
     .carousel-caption {
       background-color: transparent;
       position: static;
       max-width: 1200px;
-      padding: 0 20px;
-      margin-top: 200px;
+      margin-top: 160px;
     }
-    .carousel-caption h1 {
-      margin: 0;
+
+    .carousel-caption2 {
+      background-color: transparent;
+      position: static;
+      max-width: 1200px;
+      margin-top: 100px;
+      text-align: center;
+    }
+
+    .carousel-caption h1, .carousel-caption2 h1 {
+      margin: 0 0 10px 0;
       font-size: 35px;
       color: #fff;
       text-shadow: 0 2px 4px rgba(0,0,0,.6);
       padding: 0;
     }
-    .carousel-caption h2 {
+    
+    .carousel-caption h2, .carousel-caption2 h2 {
     	color: #f7d01f;
     	font-size: 18px;
     	text-shadow: 0 2px 4px rgba(0,0,0,.6);
-
+      line-height: 24px;
     }
+
     .lead {
     	font-size: 14px;
     	font-weight: normal;
@@ -264,9 +300,22 @@ ul.nav li.dropdown:hover > ul.dropdown-menu{
  		background-repeat: no-repeat;
  		position: absolute;
  		height: 460px;
+    width: 466px;
  		left: 600px;
  		bottom: -126px;
     }
+
+  .slideBaby {
+    background-image: url(../img/carousel-kid-2.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    height: 482px;
+    width: 618px;
+    left: 500px;
+    bottom: -187px;
+    }
+
+    
 
     .btnSchAppNav {
       height: 34px; 
@@ -437,7 +486,7 @@ ul.nav li.dropdown:hover > ul.dropdown-menu{
 
 footer {
   padding: 40px 0;
-  font-size: 10px;
+  font-size: 11px;
   background-color: #fff;
 }
 
@@ -448,7 +497,7 @@ footer ul {
 
 footer a {
   color: #686868;
-  font-size: 10px;
+  font-size: 11px;
   text-decoration: none;
 }
 
@@ -466,4 +515,106 @@ footer p {
 /* ======================================================= */
 
 
-  
+  /* Large desktop */
+@media (min-width: 1200px) { ... }
+ 
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) { 
+   .top { height: 160px;}
+   .top img { margin-top: -15px; }
+   .top h1 { margin-top: 73px; }
+  .rightHeader { width: 400px; }
+  .headerInfo { display: none;}
+  .navbar .btn-navbar {
+    margin-top: 5px;
+  } 
+  .navbar {
+    z-index: 9000;
+  }
+  .dropdown-menu {
+    background-color: #fff;
+    font-size: 11px;
+  }
+  .dropdown-menu a {
+    margin-left: 20px;
+  }
+  .navbar-inner {
+    background-color: #0d86d5;
+  }
+  .carousel-caption {
+    margin-top: 100px;
+  }
+  .slideKid{
+    left: 350px;
+    background-size: 400px;
+    margin-bottom: -22px;
+  }
+  .slideBaby {
+    left: 250px;
+    background-size: 500px;
+    margin-bottom: 0px;
+  }
+  .about-jeff-home { display: none; }
+ }
+ 
+/* Landscape phone to portrait tablet */
+@media (min-width: 481px) and (max-width: 767px) { 
+  .top h1 { margin-top: 70px; }
+  h3 { line-height: 26px; text-align: center; margin-bottom: 10px;}
+  .contained { padding-top: 20px!important; padding-bottom: 20px!important; }
+  .top { height: 150px;}
+  .staff .span4 { margin-bottom: 20px; }
+   .top img { display: none; }
+   .loc-slide { margin-top: 40px; }
+  footer { text-align: center; }
+  .home-locations { margin-top: 40px; text-align: center; }
+  .welcome h1, .border-right h3 { margin-top: 20px;}
+  .border-right {border-right: none; border-bottom: solid 1px #d7d7d7; padding-bottom: 40px;}
+  .navbar .btn-navbar { margin-top: 5px; } 
+  .rightHeader { max-width: 300px; }
+  .headerInfo { display: none;} 
+  .slideKid, .slideBaby { display: none;}
+  .carousel-caption { text-align: center; padding: 0 30px; }
+  .home-bubble { margin: 20px 0; }
+  .container { padding: 0 20px; }
+  }
+/* Landscape phones and down */
+@media (max-width: 480px) { 
+   .staff .span4 { margin-bottom: 20px; }
+   h3 { line-height: 26px; text-align: center; margin-bottom: 10px;}
+  footer { text-align: center; }  
+  .contained {margin: 0 15px; }
+  .contained { padding-top: 20px!important; padding-bottom: 20px!important; }
+  .loc-slide { margin-top: 40px; }
+  .top { height: 130px; } 
+  .top img { display: none; } 
+  .top h1 { margin-top: 50px; }
+  .navbar .btn-navbar { margin-top: 5px; } 
+  .rightHeader { width: 200px; }
+  .headerInfo { display: none;} 
+  .slideKid, .slideBaby { display: none;}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
