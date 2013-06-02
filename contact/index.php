@@ -125,7 +125,6 @@
             <li><a href="emergencies.html">Emergencies</a></li>
             <li><a href="feedback.php">Feedback</a></li>
             <li><a href="schedule-appointment.php">Schedule Appointment</a></li>
-
           </ul>
         </div>
         <div class="span9 contained">
@@ -136,6 +135,7 @@
             <div class="span6">
               <div class="span5">
                 <img src="../img/east-office-6.jpg" alt="East Office" class="box-shadow">
+                <br>
               </div>
               <div class="span7">
                 <h4>East Office</h4>
@@ -149,6 +149,7 @@
             <div class="span6">
               <div class="span5">
                 <img src="../img/west-office-1.jpg" alt="West Office" class="box-shadow">
+                <br>
               </div>
               <div class="span7">
                 <h4>West Office</h4>
@@ -198,19 +199,16 @@
                     <input class="" type="text" id="name" name="name" placeholder="First and Last" value="<?php echo $name; ?>"  required />
                     <span class="help-inline"></span>
                   </div>
-
                   <div class="control-group">
                     <label class="control-label" for="phone">Phone<span class="required">*</span></label>
                     <input class="" type="tel" id="phone" name="phone" placeholder="(555) 555-5555" value="<?php echo $phone; ?>" required />
                     <span class="help-inline"></span>
                   </div>
-
                   <div class="control-group">
                     <label class="control-label" for="email">Email<span class="required">*</span></label>
                     <input class="" type="email" id="email" name="email" placeholder="john@example.com" value="<?php echo $email; ?>" required />
                     <span class="help-inline"></span>
-                  </div>
-                  
+                  </div> 
                   <div class="control-group">
                     <label class="control-label" for="location">Select a location<span class="required">*</span></label>
                     <select name="location" id="location">
@@ -219,14 +217,11 @@
                       <option value="west" name="west" required>West Office</option>
                     </select>
                     <span class="help-inline"></span>
-                  </div>
-                  
-                  
+                  </div>     
                   <div class="control-group">
                     <label class="control-label" for="message">Message:</label>
                     <textarea class="" rows="3" id="message" name="message"><?php echo $message; ?></textarea>
                   </div>
-
                   <div class="controls">
                     <button type="submit" id="submit-button" class="btn btn-primary" data-loading-text="Sending..." data-complete-text=" Sent! ">
                           Submit
@@ -237,7 +232,6 @@
                 </form>
                 <?php } ?>
               </div>
-
               <div class="span7">
                 <div id="map_all" class="box-shadow"></div>
                 <script type="text/javascript">
@@ -284,9 +278,6 @@
       </div>
   </div><!-- End container -->
 </section>
-
-
-
 <footer>
   <div class="container">
     <div class="row-fluid">
@@ -355,12 +346,6 @@
     </div>
   </div>
 </footer>
-
     <script src="../js/epd.min.js"></script>
-  </div>
   </body>
 </html>
-
-
-
-

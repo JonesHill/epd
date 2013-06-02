@@ -135,11 +135,10 @@
       <div class="row-fluid">
         <div class="span3">
           <ul class="nav nav-tabs nav-stacked">
-            <li><a href="index.html">Contact Us</a></li>
+            <li><a href="index.php">Contact Us</a></li>
             <li><a href="emergencies.html">Emergencies</a></li>
             <li><a href="feedback.php">Feedback</a></li>
             <li><a href="schedule-appointment.php">Schedule Appointment</a></li>
-
           </ul>
         </div>
         <div class="span9 contained">
@@ -151,11 +150,8 @@
           }
           else {
         ?>
-        <p>To setup your appointment please complete the information in this form and submit using the button below. 
-        </p>
-
+        <p>To setup your appointment please complete the information in this form and submit using the button below.</p>
         <p><strong>NOTE:</strong> All fields disignated with * are required in order to process your information</p>
-
         
         <?php if(isset($_GET["err"]) && $_GET["err"] == true) { ?>
           <div class=" control-group error-message text-error" id="error-message">
@@ -177,54 +173,45 @@
             <input class="span6" type="text" id="first_name" name="first_name" placeholder="First" value="<?php echo $first_name; ?>" required />
             <span class="help-inline"></span>
           </div>
-
           <div class="control-group">
             <label class="control-label" for="last_name">Last Name<span class="required">*</span></label>
             <input class="span6" type="text" id="last_name" name="last_name" placeholder="Last" value="<?php echo $last_name; ?>" required  />
             <span class="help-inline"></span>
-          </div>
-          
+          </div>    
           <div class="control-group">
             <label class="control-label" for="street_address">Mailing Address<span class="required">*</span></label>
             <input class="span6" type="text" id="street_address" name="street_address" placeholder="Street" value="<?php echo $street; ?>" required />
             <span class="help-inline"></span>
           </div>
-    
           <div class="control-group">
             <label class="control-label" for="city">City<span class="required">*</span></label>
             <input class="span6" type="text" id="city" name="city" placeholder="City" value="<?php echo $city; ?>" required />
             <span class="help-inline"></span>
           </div>
-
           <div class="control-group">
             <label class="control-label" for="state">State<span class="required">*</span></label>
             <input class="span6" type="text" id="state" name="state" autocomplete="off" placeholder="State" value="<?php echo $state; ?>" required  />
             <span class="help-inline"></span>
-          </div>
-          
+          </div>        
           <div class="control-group">
             <label class="control-label" for="zip">Zip<span class="required">*</span></label>
             <input class="span6" type="text" id="zip" name="zip" placeholder="Zip" value="<?php echo $zip; ?>" required />
             <span class="help-inline"></span>
-          </div>
-          
+          </div>     
           <div class="control-group">
             <label class="control-label" for="phone">Phone Number<span class="required">*</span></label>
             <input class="span6" type="tel" id="phone" name="phone" placeholder="(555) 555-5555" value="<?php echo $phone; ?>" required />
             <span class="help-inline"></span>
-          </div>
-          
+          </div>    
           <div class="control-group">
             <label class="control-label" for="email">Email<span class="required">*</span></label>
             <input class="span6" type="text" id="email" name="email" placeholder="email@address.com" value="<?php echo $email; ?>" required />
             <span class="help-inline"></span>
-          </div>
-          
+          </div>        
           <div class="control-group">
             <label class="control-label" for="comments">Comments:</label>
             <textarea class="span6" rows="6" id="comments" name="comments"><?php echo $comments; ?></textarea>
           </div>
-
           <div class="controls">
             <button type="submit" id="submit-button" class="btn btn-primary" data-loading-text="Sending..." data-complete-text=" Sent! ">
                   Submit
@@ -232,15 +219,11 @@
             <button type="button" id="reset-button" class="btn">Reset</button>
               <div id="sent-message" class="sent-message"></div>
           </div>
-
         </div>
         <?php } //endif ?>
       </div>
   </div><!-- End container -->
 </section>
-
-
-
 <footer>
   <div class="container">
     <div class="row-fluid">
@@ -309,7 +292,6 @@
     </div>
   </div>
 </footer>
-
     <script src="../js/epd.min.js"></script>
   </div>
   </body>

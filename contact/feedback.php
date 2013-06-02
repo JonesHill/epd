@@ -120,11 +120,10 @@
       <div class="row-fluid">
         <div class="span3">
           <ul class="nav nav-tabs nav-stacked">
-            <li><a href="index.html">Contact Us</a></li>
+            <li><a href="index.php">Contact Us</a></li>
             <li><a href="emergencies.html">Emergencies</a></li>
             <li><a href="feedback.php">Feedback</a></li>
             <li><a href="schedule-appointment.php">Schedule Appointment</a></li>
-
           </ul>
         </div>
 
@@ -134,8 +133,6 @@
             $positive_comments = isset($_GET['positive_comments']) ? $_GET['positive_comments'] : "";
             $name = isset($_GET['name']) ? $_GET['name'] : "";
         ?>
-
-
 
         <div class="span9 contained">
         <h2>Give us Your Feedback</h2>
@@ -158,7 +155,6 @@
               <input class="" type="text" id="name" name="name" placeholder="First & Last" value="<?php echo $name; ?>" required/>
               <span class="help-inline"></span>
             </div>
-
             <div class="control-group">
               <label class="control-label">
                 <strong>How would you rate your overall visit?</strong>
@@ -178,7 +174,6 @@
                 </label>
               </div>
             </div>
-
           <div class="control-group">
             <label class="control-label">
               <strong>Did the staff treat you professionally on the phone?</strong>
@@ -198,7 +193,6 @@
               </label>
             </div>
           </div>
-
           <div class="control-group">
             <label class="control-label">
               <strong>Did the staff greet you properly?</strong>
@@ -214,7 +208,6 @@
               </label>
             </div>
           </div>
-
           <div class="control-group">
             <label class="control-label">
               <strong>Were the assistants and hygienist's friendly and professional to you and your child?</strong>
@@ -230,7 +223,6 @@
               </label>
             </div>
           </div>
-
           <div class="control-group">
             <label class="control-label">
               <strong>Did cleanliness of our practices meet your expectations?</strong>
@@ -246,7 +238,6 @@
               </label>
             </div>
           </div>
-
           <div class="control-group">
             <label class="control-label">
               <strong>Were your financial matters handled in a timely and well addressed manner?</strong>
@@ -262,7 +253,6 @@
               </label>
             </div>
           </div>
-
           <div class="control-group">
             <label class="control-label">
               <strong>Would you refer your friends and family to us?</strong>
@@ -278,7 +268,6 @@
               </label>
             </div>
           </div>
-
           <div class="control-group">
             <label class="control-label" for="better_comments">
               <strong>
@@ -287,7 +276,6 @@
             </label>
             <textarea class="span7 feedback-text" rows="6" id="better-comments" name="better_comments"><?php echo $better_comments; ?></textarea>
           </div>
-
           <div class="control-group">
             <label class="control-label" for="positive_comments">
               <strong>
@@ -296,7 +284,6 @@
             </label>
             <textarea class="span7 feedback-text" rows="6" id="positive-comments" name="positive_comments"><?php echo $positive_comments; ?></textarea>
           </div>
-
           <div class="controls">
             <button type="submit" id="submit-button" class="btn btn-primary" data-loading-text="Sending..." data-complete-text=" Sent! ">
               Submit
@@ -309,9 +296,6 @@
       </div>
   </div><!-- End container -->
 </section>
-
-
-
 <footer>
   <div class="container">
     <div class="row-fluid">
@@ -380,12 +364,7 @@
     </div>
   </div>
 </footer>
-
     <script src="../js/epd.min.js"></script>
   </div>
   </body>
 </html>
-
-
-
-
