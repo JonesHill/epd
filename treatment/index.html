@@ -19,7 +19,7 @@
         <a href="http://twitter.com/evillepeddent" target="_blank"><img src="../img/icon-twitter.jpg" alt="Find us on Twitter"></a>
         <a href="http://drjeffhiester.wordpress.com/" target="_blank"><img src="../img/icon-wordpress.jpg" alt="Read our Blog"></a></span>
         <br><br>
-        <div class="pull-right">
+        <div class="pull-right meet-doc">
           <a href="../our-team/meet-the-doctor.html"><img src="../img/icon-dr-jeff-hiester.jpg" alt="Dr. Jeff Hiester" class="icon-jeff"></a>
         </div>
         <div class="pull-right">
