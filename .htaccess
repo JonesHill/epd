@@ -1,0 +1,99 @@
+RewriteEngine On
+
+RewriteBase /
+# NOTE: The $1? bit at the end prevents the query string from getting added to the URL
+RewriteCond %{QUERY_STRING} ^pageid=OurTeam.htm$
+RewriteRule ^index\.php3$ /our-team/index.html$1? [L,R=301] 
+
+RewriteCond %{QUERY_STRING} ^pageid=MeettheDoctor.htm$
+RewriteRule ^index\.php3$ /our-team/meet-the-doctor.html$1? [L,R=301] 
+
+RewriteCond %{QUERY_STRING} ^pageid=OfficePolicies.htm$
+RewriteRule ^index\.php3$ /our-team/office-philosophy.html$1? [L,R=301] 
+
+RewriteCond %{QUERY_STRING} ^pageid=Financial-Insurance.htm$
+RewriteRule ^index\.php3$ /office/financial-insurance.html$1? [L,R=301] 
+
+RewriteCond %{QUERY_STRING} ^pageid=Appointments.htm$
+RewriteRule ^index\.php3$ /office/appointments.html$1? [L,R=301] 
+
+RewriteCond %{QUERY_STRING} ^pageid=ParentsinOperatory.htm$
+RewriteRule ^index\.php3$ /office/parents-dental-operatory.html$1? [L,R=301] 
+
+RewriteCond %{QUERY_STRING} ^pageid=Emergency.htm$
+RewriteRule ^index\.php3$ /contact/emergencies.html$1? [L,R=301] 
+
+RewriteCond %{QUERY_STRING} ^command=fb.html$
+RewriteRule ^index\.php3$ /contact/feedback.php$1? [L,R=301] 
+
+RewriteCond %{QUERY_STRING} ^pageid=Whattoexpect.htm$
+RewriteRule ^index\.php3$ /patients/child-first-visit.html$1? [L,R=301] 
+
+RewriteCond %{QUERY_STRING} ^pageid=1YearExams.htm$
+RewriteRule ^index\.php3$ /patients/complimentary-exam-for-infants.html$1? [L,R=301] 
+
+RewriteCond %{QUERY_STRING} ^pageid=DentalHealth.htm$
+RewriteRule ^index\.php3$ /patients/dental-health.html$1? [L,R=301] 
+
+RewriteCond %{QUERY_STRING} ^pageid=Cavities.htm$
+RewriteRule ^index\.php3$ /patients/preventing-tooth-decay.html$1? [L,R=301] 
+
+RewriteCond %{QUERY_STRING} ^pageid=BrushingandFlossing.htm$
+RewriteRule ^index\.php3$ /patients/brushing-flossing.html$1? [L,R=301] 
+
+RewriteCond %{QUERY_STRING} ^pageid=BabyTeeth.htm$
+RewriteRule ^index\.php3$ /patients/infant-formula.html$1? [L,R=301] 
+
+RewriteCond %{QUERY_STRING} ^pageid=Teething.htm$
+RewriteRule ^index\.php3$ /patients/teething.html$1? [L,R=301] 
+
+RewriteCond %{QUERY_STRING} ^pageid=Thumbsucking.htm$
+RewriteRule ^index\.php3$ /patients/thumbsucking.html$1? [L,R=301] 
+
+RewriteCond %{QUERY_STRING} ^pageid=TeethGrinding.htm$
+RewriteRule ^index\.php3$ /patients/teeth-grinding.html$1? [L,R=301] 
+
+RewriteCond %{QUERY_STRING} ^pageid=ToothEruptionDates.htm$
+RewriteRule ^index\.php3$ /patients/tooth-eruption-dates.html$1? [L,R=301] 
+
+RewriteCond %{QUERY_STRING} ^command=faqs.html$
+RewriteRule ^index\.php3$ /patients/frequently-asked-questions.html$1? [L,R=301] 
+
+RewriteCond %{QUERY_STRING} ^pageid=EarlyDentalCare.htm$
+RewriteRule ^index\.php3$ /treatment/early-childhood-decay.html$1? [L,R=301] 
+
+RewriteCond %{QUERY_STRING} ^pageid=GeneralTreatment.htm$
+RewriteRule ^index\.php3$ /treatment/general-treatment.html$1? [L,R=301] 
+
+RewriteCond %{QUERY_STRING} ^pageid=SedationDentistry.htm$
+RewriteRule ^index\.php3$ /treatment/sedation-dentistry.html$1? [L,R=301] 
+
+RewriteCond %{QUERY_STRING} ^pageid=HospitalDentistry.htm$
+RewriteRule ^index\.php3$ /treatment/hospital-dentistry.html$1? [L,R=301] 
+
+RewriteCond %{QUERY_STRING} ^pageid=KnowYourTeeth.htm$
+RewriteRule ^index\.php3$ /kids-zone/know-your-teeth.html$1? [L,R=301] 
+
+RewriteCond %{QUERY_STRING} ^pageid=ToothfairyLetter.htm$
+RewriteRule ^index\.php3$ /kids-zone/toothfairy-letter.html$1? [L,R=301] 
+
+RewriteCond %{QUERY_STRING} ^pageid=Games.htm$
+RewriteRule ^index\.php3$ /kids-zone/games.html$1? [L,R=301] 
+
+RewriteCond %{QUERY_STRING} ^pageid=ContactUs.htm$
+RewriteRule ^index\.php3$ /contact/index.php$1? [L,R=301] 
+
+RewriteCond %{QUERY_STRING} ^command=ap.html$
+RewriteRule ^index\.php3$ /contact/schedule-appointment.php$1? [L,R=301] 
+
+#404 Redirect
+ErrorDocument 401 /401.html
+ErrorDocument 403 /403.html
+ErrorDocument 404 /404.html
+ErrorDocument 500 /500.html
+
+#Protect HTACCESS file
+<Files .htaccess>
+order allow,deny
+deny from all
+</Files>
