@@ -567,6 +567,9 @@ footer p {
     .carousel-control { z-index: 9; }
  }
  
+
+ #map_all { width: 80%; float: right; }
+
 /* Landscape phone to portrait tablet */
 @media (min-width: 481px) and (max-width: 767px) { 
   .btnSchAppNav { display: none; }
@@ -592,7 +595,7 @@ footer p {
   .download { text-align: center; margin-bottom: 20px; }
      .navbar .btn-navbar {
     margin-top: 5px;
-  } 
+      }
 
   .carousel img {
     height: 300px;
