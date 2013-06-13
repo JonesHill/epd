@@ -144,7 +144,8 @@
                   7200 East Virginia Street <br>
                   Evansville, IN 47715
                 </address>
-                <strong>(812) 479 - 8609</strong>
+                <strong>(812) 479 - 8609</strong><br>
+                <a href="../locations/east-office.html">More info</a>
               </div>
             </div>
             <div class="span6">
@@ -158,7 +159,8 @@
                   2345 West Frankin Street Ste. 101<br>
                   Evansville, IN 47712 
                 </address>
-                 <strong>(812) 401 - 6095</strong>
+                 <strong>(812) 401 - 6095</strong><br>
+                 <a href="../locations/west-office.html">More info
               </div>
             </div>
           </div>

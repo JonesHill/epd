@@ -248,28 +248,28 @@ ul.nav li.dropdown:hover > ul.dropdown-menu{
     }
 
     .carousel .item {
-      height: 480px;
+      /* height: 480px; */
     }
     .carousel img {
       position: absolute;
       top: 0;
       left: 0;
-      min-width: 100%;
-      height: 480px;
+      width: 100%;
+      height: 400px;
     }
 
-    .carousel-caption {
+    .carousel-caption, .carousel-caption2 {
       background-color: transparent;
       position: static;
       max-width: 1200px;
-      margin-top: 160px;
+    
     }
 
     .carousel-caption2 {
       background-color: transparent;
-      position: static;
+      /*position: static; 
       max-width: 1200px;
-      margin-top: 100px;
+      margin-top: 100px; */
       text-align: center;
     }
 
@@ -292,30 +292,23 @@ ul.nav li.dropdown:hover > ul.dropdown-menu{
     	font-size: 14px;
     	font-weight: normal;
     }
+
     .carousel-caption .btn {
       margin-top: 10px;
     }
-    .slideKid {
- 		background-image: url(../img/carousel-kid-1.png);
- 		background-repeat: no-repeat;
- 		position: absolute;
- 		height: 460px;
-    width: 466px;
- 		left: 600px;
- 		bottom: -126px;
+
+
+    .slidekid {
+      margin-top: 30px;
+      margin-bottom: -20px;
+      margin-left: 40px;
+      height: 360px !important;
+      width: auto !important;
+      position: static !important;
     }
 
-  .slideBaby {
-    background-image: url(../img/carousel-kid-2.png);
-    background-repeat: no-repeat;
-    position: absolute;
-    height: 482px;
-    width: 618px;
-    left: 500px;
-    bottom: -187px;
-    }
 
-    
+    .kid-statement { margin-top: 80px; }
 
     .btnSchAppNav {
       height: 34px; 
@@ -326,6 +319,8 @@ ul.nav li.dropdown:hover > ul.dropdown-menu{
       margin-top: 8px;
       margin-right: 10px;
     }
+
+
     .btnSchAppNav:hover {
       background-position: 0 -34px;
     }
@@ -516,7 +511,13 @@ footer p {
 
 
   /* Large desktop */
-@media (min-width: 1200px) { ... }
+@media (min-width: 768px) and (max-width: 979px) { 
+
+.carousel img {
+  height: 400px;
+}
+
+ }
  
 /* Portrait tablet to landscape and desktop */
 @media (min-width: 768px) and (max-width: 979px) { 
@@ -549,8 +550,8 @@ footer p {
   .navbar-inner {
     background-color: #0d86d5;
   }
-  .carousel-caption {
-    margin-top: 100px;
+  .carousel img {
+    height: 400px;
   }
   .slideKid{
     left: 350px;
@@ -592,6 +593,11 @@ footer p {
      .navbar .btn-navbar {
     margin-top: 5px;
   } 
+
+  .carousel img {
+    height: 300px;
+  }
+
   .navbar-inner {
     background: #207cca!important;
     background: -moz-linear-gradient(top,  #207cca 0%, #1e5799 100%)!important;
@@ -615,7 +621,13 @@ footer p {
   .navbar-inner {
     background-color: #0d86d5;
   }
+  .slidekid { display: none; 
   }
+  .kid-statement h1 { font-size: 24px; }
+
+  .kid-statement a { display: none; }
+
+}
 /* Landscape phones and down */
 @media (max-width: 480px) { 
   .welcome h1 { text-align: center; }
@@ -669,6 +681,17 @@ footer p {
   .navbar-inner {
     background-color: #0d86d5;
   }
+
+    .carousel img {
+    height: 300px;
+  }
+
+  .rightHeader { display: none !important; }
+  .slidekid { display: none; }
+  .kid-statement { margin-top: -50px; }
+  .kid-statement a { display: none; }
+  .features { padding: 0; }
+  .kid-statement h1 { font-size: 24px; }
 
 }
 
