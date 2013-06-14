@@ -118,183 +118,190 @@
 </div>
 <section class="pattern-internal">
   <div class="container">
-      <div class="row-fluid">
-        <div class="span3">
-          <ul class="nav nav-tabs nav-stacked">
-            <li><a href="index.php">Contact Us</a></li>
-            <li><a href="emergencies.html">Emergencies</a></li>
-            <li><a href="feedback.php">Feedback</a></li>
-            <li><a href="schedule-appointment.php">Schedule Appointment</a></li>
-          </ul>
-        </div>
-
-        <?php
-            // This is only really used if there is no JS enabled. 
-            $better_comments = isset($_GET['better_comments']) ? $_GET['better_comments'] : "";
-            $positive_comments = isset($_GET['positive_comments']) ? $_GET['positive_comments'] : "";
-            $name = isset($_GET['name']) ? $_GET['name'] : "";
-        ?>
-
-        <div class="span9 contained">
-        <h2>Give us Your Feedback</h2>
-        <?php 
-          if(isset($_GET['mail_sent']) && $_GET['mail_sent'] == true) {
-            echo "<p>Thanks for your feedback!</p>";
-          }
-          else {
-        ?>
-          <?php if(isset($_GET["err"]) && $_GET["err"] == true) { ?>
-            <div class=" control-group error-message text-error" id="error-message">
-              <?php echo "Please fill in the required fields."; ?>
-            </div>
-          <?php } ?>
-
-          <form class="" id="feedback-form" method="post" action="../../lib/process_form.php">
-            <input type="hidden" name="form_type" value="feedback" />
-            <div class="control-group">
-              <label class="control-label" for="name">Patient Name<span class="required">*</span></label>
-              <input class="" type="text" id="name" name="name" placeholder="First & Last" value="<?php echo $name; ?>" required/>
-              <span class="help-inline"></span>
-            </div>
-            <div class="control-group">
-              <label class="control-label">
-                <strong>How would you rate your overall visit?</strong>
-              </label>
-              <div class="feedback-answers">
-                <label class="radio">
-                  <input type="radio" name="overall_rating" id="overall-rating-very" value="very" checked>
-                  Very Satisfied  
-                </label>
-                <label class="radio">
-                  <input type="radio" name="overall_rating" id="overall-rating-avg" value="avg">
-                  Satisfied
-                </label>
-                <label class="radio">
-                  <input type="radio" name="overall_rating" id="overall-rating-somewhat" value="somewhat">
-                  Somewhat satisfied
-                </label>
-              </div>
-            </div>
-          <div class="control-group">
-            <label class="control-label">
-              <strong>Did the staff treat you professionally on the phone?</strong>
-            </label>
-            <div class="feedback-answers">
-              <label class="radio">
-                <input type="radio" name="professional_phone" id="professional-phone-yes" value="yes" checked>
-                Yes  
-              </label>
-              <label class="radio">
-                <input type="radio" name="professional_phone" id="professional-phone-no" value="no">
-                No
-              </label>
-              <label class="radio">
-                <input type="radio" name="professional_phone" id="professional-phone-idk" value="idk">
-                I do not know
-              </label>
-            </div>
-          </div>
-          <div class="control-group">
-            <label class="control-label">
-              <strong>Did the staff greet you properly?</strong>
-            </label>
-            <div class="feedback-answers">
-              <label class="radio">
-                <input type="radio" name="proper_greet" id="proper-greet-yes" value="yes" checked>
-                Yes  
-              </label>
-              <label class="radio">
-                <input type="radio" name="proper_greet" id="proper-greet-no" value="no">
-                No
-              </label>
-            </div>
-          </div>
-          <div class="control-group">
-            <label class="control-label">
-              <strong>Were the assistants and hygienist's friendly and professional to you and your child?</strong>
-            </label>
-            <div class="feedback-answers">
-              <label class="radio">
-                <input type="radio" name="friendly_to_child" id="friendly-to-child-yes" value="yes" checked>
-                Yes  
-              </label>
-              <label class="radio">
-                <input type="radio" name="friendly_to_child" id="friendly-to-child-no" value="no">
-                No
-              </label>
-            </div>
-          </div>
-          <div class="control-group">
-            <label class="control-label">
-              <strong>Did cleanliness of our practices meet your expectations?</strong>
-            </label>
-            <div class="feedback-answers">
-              <label class="radio">
-                <input type="radio" name="cleanliness_expectations" id="cleanliness-expectations-yes" value="yes" checked>
-                Yes  
-              </label>
-              <label class="radio">
-                <input type="radio" name="cleanliness_expectations" id="cleanliness-expectations-no" value="no">
-                No
-              </label>
-            </div>
-          </div>
-          <div class="control-group">
-            <label class="control-label">
-              <strong>Were your financial matters handled in a timely and well addressed manner?</strong>
-            </label>
-            <div class="feedback-answers">
-              <label class="radio">
-                <input type="radio" name="financial_matters" id="financial-matters-yes" value="yes" checked>
-                Yes  
-              </label>
-              <label class="radio">
-                <input type="radio" name="financial_matters" id="financial-matters-no" value="no">
-                No
-              </label>
-            </div>
-          </div>
-          <div class="control-group">
-            <label class="control-label">
-              <strong>Would you refer your friends and family to us?</strong>
-            </label>
-            <div class="feedback-answers">
-              <label class="radio">
-                <input type="radio" name="refer_us" id="refer-us-yes" value="yes" checked>
-                Yes  
-              </label>
-              <label class="radio">
-                <input type="radio" name="refer_us" id="refer-us-no" value="no">
-                No
-              </label>
-            </div>
-          </div>
-          <div class="control-group">
-            <label class="control-label" for="better_comments">
-              <strong>
-                Please comment on how we could make your visit better:
-              </strong>
-            </label>
-            <textarea class="span7 feedback-text" rows="6" id="better-comments" name="better_comments"><?php echo $better_comments; ?></textarea>
-          </div>
-          <div class="control-group">
-            <label class="control-label" for="positive_comments">
-              <strong>
-                Please feel free to share positive comments here:
-              </strong>
-            </label>
-            <textarea class="span7 feedback-text" rows="6" id="positive-comments" name="positive_comments"><?php echo $positive_comments; ?></textarea>
-          </div>
-          <div class="controls">
-            <button type="submit" id="submit-button" class="btn btn-primary" data-loading-text="Sending..." data-complete-text=" Sent! ">
-              Submit
-            </button>
-            <button type="button" id="reset-button" class="btn">Reset</button>
-              <div id="sent-message" class="sent-message"></div>
-          </div>
-        </div>
-        <?php } ?>
+    <div class="row-fluid">
+      <div class="span3">
+        <ul class="nav nav-tabs nav-stacked">
+          <li><a href="index.php">Contact Us</a></li>
+          <li><a href="emergencies.html">Emergencies</a></li>
+          <li><a href="feedback.php">Feedback</a></li>
+          <li><a href="schedule-appointment.php">Schedule Appointment</a></li>
+        </ul>
       </div>
+
+      <?php
+          // This is only really used if there is no JS enabled. 
+          $better_comments = isset($_GET['better_comments']) ? $_GET['better_comments'] : "";
+          $positive_comments = isset($_GET['positive_comments']) ? $_GET['positive_comments'] : "";
+          $name = isset($_GET['name']) ? $_GET['name'] : "";
+      ?>
+
+      <div class="span9 contained">
+      <h2>Give us Your Feedback</h2>
+      <?php 
+        if(isset($_GET['mail_sent']) && $_GET['mail_sent'] == true) {
+          echo "<p>Thanks for your feedback!</p>";
+        }
+        else {
+      ?>
+        <?php if(isset($_GET["err"]) && $_GET["err"] == true) { ?>
+          <div class=" control-group error-message text-error" id="error-message">
+            <?php echo "Please fill in the required fields."; ?>
+          </div>
+        <?php } ?>
+
+        <form class="" id="feedback-form" method="post" action="../../lib/process_form.php">
+          <input type="hidden" name="form_type" value="feedback" />
+          <div class="control-group">
+            <label class="control-label" for="name">Patient Name<span class="required">*</span></label>
+            <input class="" type="text" id="name" name="name" placeholder="First & Last" value="<?php echo $name; ?>" required/>
+            <span class="help-inline"></span>
+          </div>
+          <div class="control-group">
+            <label class="control-label">
+              <strong>How would you rate your overall visit?</strong>
+            </label>
+            <div class="feedback-answers">
+              <label class="radio">
+                <input type="radio" name="overall_rating" id="overall-rating-very" value="very" checked>
+                Very Satisfied  
+              </label>
+              <label class="radio">
+                <input type="radio" name="overall_rating" id="overall-rating-avg" value="avg">
+                Satisfied
+              </label>
+              <label class="radio">
+                <input type="radio" name="overall_rating" id="overall-rating-somewhat" value="somewhat">
+                Somewhat satisfied
+              </label>
+            </div>
+          </div>
+        <div class="control-group">
+          <label class="control-label">
+            <strong>Did the staff treat you professionally on the phone?</strong>
+          </label>
+          <div class="feedback-answers">
+            <label class="radio">
+              <input type="radio" name="professional_phone" id="professional-phone-yes" value="yes" checked>
+              Yes  
+            </label>
+            <label class="radio">
+              <input type="radio" name="professional_phone" id="professional-phone-no" value="no">
+              No
+            </label>
+            <label class="radio">
+              <input type="radio" name="professional_phone" id="professional-phone-idk" value="idk">
+              I do not know
+            </label>
+          </div>
+        </div>
+        <div class="control-group">
+          <label class="control-label">
+            <strong>Did the staff greet you properly?</strong>
+          </label>
+          <div class="feedback-answers">
+            <label class="radio">
+              <input type="radio" name="proper_greet" id="proper-greet-yes" value="yes" checked>
+              Yes  
+            </label>
+            <label class="radio">
+              <input type="radio" name="proper_greet" id="proper-greet-no" value="no">
+              No
+            </label>
+          </div>
+        </div>
+        <div class="control-group">
+          <label class="control-label">
+            <strong>Were the assistants and hygienist's friendly and professional to you and your child?</strong>
+          </label>
+          <div class="feedback-answers">
+            <label class="radio">
+              <input type="radio" name="friendly_to_child" id="friendly-to-child-yes" value="yes" checked>
+              Yes  
+            </label>
+            <label class="radio">
+              <input type="radio" name="friendly_to_child" id="friendly-to-child-no" value="no">
+              No
+            </label>
+          </div>
+        </div>
+        <div class="control-group">
+          <label class="control-label">
+            <strong>Did cleanliness of our practices meet your expectations?</strong>
+          </label>
+          <div class="feedback-answers">
+            <label class="radio">
+              <input type="radio" name="cleanliness_expectations" id="cleanliness-expectations-yes" value="yes" checked>
+              Yes  
+            </label>
+            <label class="radio">
+              <input type="radio" name="cleanliness_expectations" id="cleanliness-expectations-no" value="no">
+              No
+            </label>
+          </div>
+        </div>
+        <div class="control-group">
+          <label class="control-label">
+            <strong>Were your financial matters handled in a timely and well addressed manner?</strong>
+          </label>
+          <div class="feedback-answers">
+            <label class="radio">
+              <input type="radio" name="financial_matters" id="financial-matters-yes" value="yes" checked>
+              Yes  
+            </label>
+            <label class="radio">
+              <input type="radio" name="financial_matters" id="financial-matters-no" value="no">
+              No
+            </label>
+          </div>
+        </div>
+        <div class="control-group">
+          <label class="control-label">
+            <strong>Would you refer your friends and family to us?</strong>
+          </label>
+          <div class="feedback-answers">
+            <label class="radio">
+              <input type="radio" name="refer_us" id="refer-us-yes" value="yes" checked>
+              Yes  
+            </label>
+            <label class="radio">
+              <input type="radio" name="refer_us" id="refer-us-no" value="no">
+              No
+            </label>
+          </div>
+        </div>
+        <div class="control-group">
+          <label class="control-label" for="better_comments">
+            <strong>
+              Please comment on how we could make your visit better:
+            </strong>
+          </label>
+          <textarea class="span7 feedback-text" rows="6" id="better-comments" name="better_comments"><?php echo $better_comments; ?></textarea>
+        </div>
+        <div class="control-group">
+          <label class="control-label" for="positive_comments">
+            <strong>
+              Please feel free to share positive comments here:
+            </strong>
+          </label>
+          <textarea class="span7 feedback-text" rows="6" id="positive-comments" name="positive_comments"><?php echo $positive_comments; ?></textarea>
+        </div>
+        <div class="controls">
+          <button type="submit" id="submit-button" class="btn btn-primary" data-loading-text="Sending..." data-complete-text=" Sent! ">
+            Submit
+          </button>
+          <button type="button" id="reset-button" class="btn">Reset</button>
+            <div id="sent-message" class="sent-message"></div>
+        </div>
+
+        <div class="password-input">
+          <label for="password_input">
+            If you see this, leave this form field blank
+          </label>
+          <input type="text" id="password_input" name="password_input" value=""/>
+        </div>
+      </form>
+      <?php } ?>
+    </div>
   </div><!-- End container -->
 </section>
 <footer>

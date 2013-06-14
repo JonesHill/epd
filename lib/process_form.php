@@ -7,7 +7,7 @@ function isValidEmail($email) {
 
 // Constants
 define( "RECIPIENT_NAME", "TEST HILL" );
-define( "RECIPIENT_EMAIL", "peddds1@yahoo.com" );
+define( "RECIPIENT_EMAIL", "bryceahill@gmail.com" );
 
 
 if(isset($_POST["form_type"])) {
@@ -37,12 +37,19 @@ $financial_matters = "";
 $refer_us = "";
 $better_comments = "";
 $positive_comments = "";
+$password_input = '';
 
 $errors = array();
 $success = false;
 $invalid_email = false;
-
+error_log(print_r($_POST,1));
 if($_SERVER['REQUEST_METHOD'] == "POST") {
+
+	if($_POST['password_input'] != '') {
+		//SPAM BOT ABORT
+		error_log("We are getting spammed...");
+		return;
+	}
 	
 	switch($form_type) {
 

@@ -230,6 +230,12 @@
                     <button type="button" id="reset-button" class="btn">Reset</button>
                       <div id="sent-message" class="sent-message contact-form">&nbsp;</div>
                   </div>
+                  <div class="password-input">
+                    <label for="password_input">
+                      If you see this, leave this form field blank
+                    </label>
+                    <input type="text" id="password_input" name="password_input" value=""/>
+                  </div>
                 </form>
                 <?php } ?>
               </div>
