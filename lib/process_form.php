@@ -7,7 +7,7 @@ function isValidEmail($email) {
 
 // Constants
 define( "RECIPIENT_NAME", "TEST HILL" );
-define( "RECIPIENT_EMAIL", "bryceahill@gmail.com" );
+define( "RECIPIENT_EMAIL", "info@evansvillepediatricdentistry.com" );
 
 
 if(isset($_POST["form_type"])) {
