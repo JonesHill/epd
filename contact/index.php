@@ -160,7 +160,7 @@
                   Evansville, IN 47712 
                 </address>
                  <strong>(812) 401 - 6095</strong><br>
-                 <a href="../locations/west-office.html">More info
+                 <a href="../locations/west-office.html">More info</a>
               </div>
             </div>
           </div>
